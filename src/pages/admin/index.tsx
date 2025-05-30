@@ -89,7 +89,7 @@ const AdminPage = () => {
 
   const handleDeleteMenu = async () => {
     try {
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from("menus")
         .delete()
         .eq("id", selectedMenu?.menu.id);
